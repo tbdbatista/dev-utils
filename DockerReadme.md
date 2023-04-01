@@ -55,3 +55,7 @@ docker cp [nome do container]:/pasta de destino/nome-do-arquivo.extensao  nome-d
 2. docker run -e MYSQL_ROOT_PASSWORD=Senha --name nome-do-container -d -p 3306:3306 mysql:tag => cria o container com o nome excolhido com a configuração das variáveis: senha para usuário root e porta 3306
 3. docker exec -it nome-do-container bash => executa o bash
 4. mysql -u root -p --protocol=tcp => comando executado dentro do container para abrir o servidor MySQL com o protocolo tcp
+
+### Acessando um docker externamente
+docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql
+mysql -u root -p --protocol=tcp --port=3306
