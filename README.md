@@ -7,7 +7,7 @@ It allows you to run an operating system (OS) on a different machine without hav
 ## Docker
 It enables developers to build, ship, and run applications in containers. Containers are lightweight and portable, making them an excellent choice for deploying applications across different environments.
 
-## Git - (GitReadme)[https://github.com/tbdbatista/dev-utils/blob/72f0bd68fcaaaaf6f4be66c4aa7bd6938aac3ab8/GitReadme.md]
+## Git - [GitReadme](https://github.com/tbdbatista/dev-utils/blob/72f0bd68fcaaaaf6f4be66c4aa7bd6938aac3ab8/GitReadme.md)
 It allows developers to manage and track changes to their code over time. It is an essential tool for collaborating with others on a project, as it enables multiple developers to work on the same codebase without conflicts. 
 
 ## Vim
