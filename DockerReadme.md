@@ -59,3 +59,8 @@ docker cp [nome do container]:/pasta de destino/nome-do-arquivo.extensao  nome-d
 ### Acessando um docker externamente
 docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql
 mysql -u root -p --protocol=tcp --port=3306
+
+### Gerencimaneto de processamento
+docker stats [nome do container] => indica dados de consumo de processamento do container
+docker uptade [nome do container] -m 128M --cpus 0.2 => atua;oza p limita uso de memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
+
