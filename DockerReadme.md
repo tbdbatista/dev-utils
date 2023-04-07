@@ -40,7 +40,7 @@ docker run -dti --name nome-do-container ubuntu => executa um container em segun
 
 ### Executando aplicações no containers
 docker run -dti  ubuntu => inicia um container
-docker exec -it [id ou nome]  /bin/bash => executa o bash no container (também pode ser executado digitando somente bash)
+docker exec -it [id ou nome] /bin/bash => executa o bash no container (também pode ser executado digitando somente bash)
 
 ### Remover containers e imagens
 docker rm [id] OR [name] => remove um container com a id (pode utilizar somente os 3 primeiros digitos da id) ou com o nome citado
@@ -62,5 +62,5 @@ mysql -u root -p --protocol=tcp --port=3306
 
 ### Gerencimaneto de processamento
 docker stats [nome do container] => indica dados de consumo de processamento do container
-docker uptade [nome do container] -m 128M --cpus 0.2 => atua;oza p limita uso de memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
+docker uptade [nome do container] -m 128M --cpus 0.2 => atualiza o limite de uso da memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
 
