@@ -1,5 +1,14 @@
 # Docker Commands :us:
 
+### Flags
+-ti => used to allocate a pseudo-tty and enable interactive communication with the container's command line
+
+-d => used to run a container in detached mode. This means that the container will run in the background, and you will not be attached to its console or terminal
+
+-v ou --volume => used to create a volume or mount a directory from the host machine into the container
+
+-p => used to map a network port on the host machine to a network port inside the container
+
 ### Downloading a container image:
 docker pull ubuntu:tag => downloads the image with the specified tag.
 
@@ -38,6 +47,19 @@ docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=
 
 mysql -u root -p --protocol=tcp --port=3306 => this command will allow you to access the MySQL shell as root user
 
+### Managing volumes
+docker volume create [volume name] => used to create a new volume
+
+docker volume ls => list all the volumes in Docker
+
+docker volume inspect [volume name] => inspect the details of a specific volume in Docker
+
+docker volume rm [volume name] => remove a specific volume from Docker
+
+docker volume prune => remove all unused volumes in Docker
+
+docker run -v [volume name]:[container directory] [image name] => used to mount a volume to a specific directory in a container when running it
+
 ### Processing management
 docker stats [nome do container] => display consumption data for the specified container
 
@@ -55,6 +77,16 @@ docker container top [nome do container] => display the processes running in the
 
 
 # Comandos para Docker :brazil:
+
+### Flags
+-ti => aloca um pseudo-tty e habilita a comunicação interativa com a linha de comando do container
+
+-d => executa um container no modo desanexado. Isso significa que o container será executado em segundo plano
+
+-v ou --volume => usado para criar um volume ou montar um diretório da máquina host no container
+
+-p => usado para mapear uma porta de rede na máquina host para uma porta de rede dentro do container
+
 ### Baixando a imagem de um container
 docker pull ubuntu:tag => realiza o download da imagem com a tag citada
 
@@ -93,12 +125,27 @@ docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=
 
 mysql -u root -p --protocol=tcp --port=3306 => concede acesso ao shell do MYSQL como usuário root
 
+### Gerenciando volumes
+docker volume create [nome do volume] => cria um novo volume no Docker
+
+docker volume ls => lista todos os volumes no Docker
+
+docker volume inspect [nome do volume] => inspeciona os detalhes de um volume específico
+
+docker volume rm [nome do volume] => remove um volume específico do Docker
+
+docker volume prune - remove todos os volumes não utilizados no Docker
+
+docker run -v [nome do volume]:[diretório do container] [nome da imagem] => é usado para montar um volume em um diretório específico em um container durante a execução
+
 ### Gerenciamento de processamento
 docker stats [nome do container] => indica dados de consumo de processamento do container
 
 docker uptade [nome do container] -m 128M --cpus 0.2 => atualiza o limite de uso da memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
 
 ### Informações do servidor e seus containers
+docker inspect [nome do container] => mostra todas as informações do container
+
 docker info => informações sobre containers, imagens, SO, arquitetura, memória, cpu, entre outras informações
 
 ip a => informações sobre os endereços do servidor
@@ -107,3 +154,6 @@ docker container logs [nome do container] => informações dos logs de execuçã
 
 docker container top [nome do container] => processos em execução no container
 
+docker network ls => lista as redes utilizadas pelo docker
+
+docker network inspect bridge => indica quais containers estão adicionados a rede bridge
