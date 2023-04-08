@@ -179,6 +179,8 @@ docker network disconnect [nome da rede] [nome do container] => desconecta um co
 
 docker network prune=> é usado para remover todas as redes não utilizadas no Docker
 
+docker run --network [nome da rede] [nome da imagem] => cria um container conectado a rede indicada
+
 ### Gerenciamento de processamento
 
 docker stats [nome do container] => indica dados de consumo de processamento do container
