@@ -13,6 +13,7 @@
 docker pull ubuntu:tag => downloads the image with the specified tag.
 
 ### Running a container:
+
 docker run ubuntu => runs a container from the image named ubuntu.
 
 docker stop [id] => stops a running container.
@@ -22,11 +23,13 @@ docker run -it ubuntu => runs a container in the background.
 docker run -dti --name container-name ubuntu => runs a container in the background with the specified name.
 
 ### Running applications in containers:
+
 docker run -dti ubuntu => starts a container.
 
 docker exec -it [id or name] /bin/bash => executes bash in the container (can also be executed by just typing "bash").
 
 ### Removing containers and images:
+
 docker rm [id] OR [name] => removes a container with the specified ID (can use only the first 3 digits of the ID) or name.
 
 docker rmi [image] => removes the image with the specified name.
@@ -37,12 +40,14 @@ docker cp file-name.extension [container name]:/destination-folder/ => copies th
 docker cp [container name]:/destination-folder/file-name.extension destination-file-name.extension => copies the chosen file from the container to the server.
 
 ### Creating a MySQL container:
+
 1. docker pull mysql:tag.
 2. docker run -e MYSQL_ROOT_PASSWORD=Password --name container-name -d -p 3306:3306 mysql:tag => creates a container with the specified name, and the configuration variables set to password for root user and port 3306.
 3. docker exec -it container-name bash => executes bash.
 4. mysql -u root -p --protocol=tcp => command executed inside the container to open the MySQL server with the TCP protocol.
 
 ### Accessing an external docker
+
 docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql => this will start a docker container named "mysql-A" with a MySQL database and map the container's port 3306 to the host's port 3306
 
 mysql -u root -p --protocol=tcp --port=3306 => this command will allow you to access the MySQL shell as root user
@@ -60,7 +65,27 @@ docker volume prune => remove all unused volumes in Docker
 
 docker run -v [volume name]:[container directory] [image name] => used to mount a volume to a specific directory in a container when running it
 
+
+### Managing networks
+
+docker network create [netwrok name] => create a new user-defined network in Docker
+
+docker network ls => list all the networks in Docker
+
+docker network inspect [netwrok name] => inspect the details of a specific network in Docker
+
+docker network rm [netwrok name] => used to remove a specific network in Docker
+
+docker network connect [netwrok name] [container name] => used to connect a container to a specific network
+
+docker network disconnect [netwrok name] [container name] => used to disconnect a container from a specific network
+
+docker network prune => remove all unused networks in Docker
+
+
+
 ### Processing management
+
 docker stats [nome do container] => display consumption data for the specified container
 
 docker uptade [nome do container] -m 128M --cpus 0.2 => update the memory usage limit to 128MB and CPU usage to 20% for the specified container. These values can also be set when running the container with the \'docker run\' command
@@ -134,16 +159,34 @@ docker volume inspect [nome do volume] => inspeciona os detalhes de um volume es
 
 docker volume rm [nome do volume] => remove um volume específico do Docker
 
-docker volume prune - remove todos os volumes não utilizados no Docker
+docker volume prune => remove todos os volumes não utilizados no Docker
 
 docker run -v [nome do volume]:[diretório do container] [nome da imagem] => é usado para montar um volume em um diretório específico em um container durante a execução
 
+### Gerenciamento de redes
+
+docker network create [nome da rede] => cria uma nova rede definida pelo usuário no Docker
+
+docker network ls => é usado para listar todas as redes no Docker
+
+docker network inspect [nome da rede] =>  é usado para inspecionar os detalhes de uma rede específica no Docker
+
+docker network rm [nome da rede] =>  remove uma rede específica no Docker
+
+docker network connect [nome da rede] [nome do container] => é usado para conectar um container a uma rede específica
+
+docker network disconnect [nome da rede] [nome do container] => desconecta um container de uma rede específica
+
+docker network prune=> é usado para remover todas as redes não utilizadas no Docker
+
 ### Gerenciamento de processamento
+
 docker stats [nome do container] => indica dados de consumo de processamento do container
 
 docker uptade [nome do container] -m 128M --cpus 0.2 => atualiza o limite de uso da memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
 
 ### Informações do servidor e seus containers
+
 docker inspect [nome do container] => mostra todas as informações do container
 
 docker info => informações sobre containers, imagens, SO, arquitetura, memória, cpu, entre outras informações
