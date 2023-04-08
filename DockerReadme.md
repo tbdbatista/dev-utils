@@ -68,17 +68,17 @@ docker run -v [volume name]:[container directory] [image name] => used to mount 
 
 ### Managing networks
 
-docker network create [netwrok name] => create a new user-defined network in Docker
+docker network create [network name] => create a new user-defined network in Docker
 
 docker network ls => list all the networks in Docker
 
-docker network inspect [netwrok name] => inspect the details of a specific network in Docker
+docker network inspect [network name] => inspect the details of a specific network in Docker
 
-docker network rm [netwrok name] => used to remove a specific network in Docker
+docker network rm [network name] => used to remove a specific network in Docker
 
-docker network connect [netwrok name] [container name] => used to connect a container to a specific network
+docker network connect [network name] [container name] => used to connect a container to a specific network
 
-docker network disconnect [netwrok name] [container name] => used to disconnect a container from a specific network
+docker network disconnect [network name] [container name] => used to disconnect a container from a specific network
 
 docker network prune => remove all unused networks in Docker
 
@@ -86,19 +86,39 @@ docker network prune => remove all unused networks in Docker
 
 ### Processing management
 
-docker stats [nome do container] => display consumption data for the specified container
+docker stats [network name] => display consumption data for the specified container
 
-docker uptade [nome do container] -m 128M --cpus 0.2 => update the memory usage limit to 128MB and CPU usage to 20% for the specified container. These values can also be set when running the container with the \'docker run\' command
+docker uptade [network name] -m 128M --cpus 0.2 => update the memory usage limit to 128MB and CPU usage to 20% for the specified container. These values can also be set when running the container with the \'docker run\' command
 
 ### Server and container information
+
 docker info => display information about containers, images, operating system, architecture, memory, CPU, and other system information
 
 ip a => display information about the server's IP addresses
 
-docker container logs [nome do container] => display execution logs for the specified container
+docker container logs [network name] => display execution logs for the specified container
 
-docker container top [nome do container] => display the processes running in the specified container
+docker container top [network name] => display the processes running in the specified container
 
+docker network ls => lista as redes utilizadas pelo docker
+
+docker network inspect bridge => indica quais containers estão adicionados a rede bridge
+
+### Creating a Docker Image
+
+1. Create a Dockerfile that defines the instructions to build the image.
+2. Open a terminal or command prompt and navigate to the directory that contains the Dockerfile.
+3. Run the command "docker image build 'flags' -t [image name]:[tag] [build directory]" with the appropriate options to create the image.
+4. Docker will execute each instruction in the Dockerfile.
+5. When the build process is complete, Docker will create a new image with the specified name and tag.
+
+#### Flags used:
+
+-t => to specify the name and tag of the new image.
+
+-f => to specify the name and location of the Dockerfile (if it's not called "Dockerfile" or not located in the current directory).
+
+--no-cache => to prevent Docker from using cached layers during the build process.
 
 
 # Comandos para Docker :brazil:
@@ -202,3 +222,18 @@ docker container top [nome do container] => processos em execução no container
 docker network ls => lista as redes utilizadas pelo docker
 
 docker network inspect bridge => indica quais containers estão adicionados a rede bridge
+
+### Criando uma imagem para o docker
+1. Crie um Dockerfile que defina as instruções para construir a imagem.
+2. Abra um terminal ou prompt de comando e navegue até o diretório que contém o Dockerfile.
+3. Execute o comando \"docker image build \'flags\' -t [nome da imagem]:[tag] [diretório de criação]\" com as opções apropriadas para criar a imagem.
+4. O Docker executará cada instrução no Dockerfile.
+5. Quando o processo de build estiver concluído, o Docker criará uma nova imagem com o nome e a tag especificados.
+
+#### flags utilizadas:
+
+-t => para especificar o nome e a tag da nova imagem.
+
+-f => para especificar o nome e a localização do Dockerfile (se ele não se chamar "Dockerfile" ou não estiver localizado no diretório atual).
+
+--no-cache => para impedir que o Docker use camadas em cache durante o processo de construção.
