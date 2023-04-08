@@ -27,6 +27,21 @@ docker cp [container name]:/destination-folder/file-name.extension destination-f
 3. docker exec -it container-name bash => executes bash.
 4. mysql -u root -p --protocol=tcp => command executed inside the container to open the MySQL server with the TCP protocol.
 
+### Accessing an external docker
+docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql => this will start a docker container named "mysql-A" with a MySQL database and map the container's port 3306 to the host's port 3306
+mysql -u root -p --protocol=tcp --port=3306 => this command will allow you to access the MySQL shell as root user
+
+### Processing management
+docker stats [nome do container] => display consumption data for the specified container
+docker uptade [nome do container] -m 128M --cpus 0.2 => update the memory usage limit to 128MB and CPU usage to 20% for the specified container. These values can also be set when running the container with the \'docker run\' command
+
+### Server and container information
+docker info => display information about containers, images, operating system, architecture, memory, CPU, and other system information
+ip a => display information about the server's IP addresses
+docker container logs [nome do container] => display execution logs for the specified container
+docker container top [nome do container] => display the processes running in the specified container
+
+
 
 # Comandos para Docker :brazil:
 ### Baixando a imagem de um container
@@ -60,7 +75,13 @@ docker cp [nome do container]:/pasta de destino/nome-do-arquivo.extensao  nome-d
 docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql
 mysql -u root -p --protocol=tcp --port=3306
 
-### Gerencimaneto de processamento
+### Gerenciamento de processamento
 docker stats [nome do container] => indica dados de consumo de processamento do container
 docker uptade [nome do container] -m 128M --cpus 0.2 => atualiza o limite de uso da memória para 128M e uso da cpu para 20%, esses valores podem ser setados no \'docker run\'
+
+### Informações do servidor e seus containers
+docker info => informações sobre containers, imagens, SO, arquitetura, memória, cpu, entre outras informações
+ip a => informações sobre os endereços do servidor
+docker container logs [nome do container] => informações dos logs de execução 
+docker container top [nome do container] => processos em execução no container
 
