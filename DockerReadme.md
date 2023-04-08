@@ -72,8 +72,8 @@ docker cp [nome do container]:/pasta de destino/nome-do-arquivo.extensao  nome-d
 4. mysql -u root -p --protocol=tcp => comando executado dentro do container para abrir o servidor MySQL com o protocolo tcp
 
 ### Acessando um docker externamente
-docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql
-mysql -u root -p --protocol=tcp --port=3306
+docker run -e MYSQL_ROOT_PASSWORD=Senha --name mysql-A -d -p 3306:3306 --volume=/data:/var/lib/mysql mysql => inicia um container do docker nomeado \"mysql-A\" com o MySQL database e mapeia a porta 3306 do container 3306 com a porta 3306 do host
+mysql -u root -p --protocol=tcp --port=3306 => concede acesso ao shell do MYSQL como usuário root
 
 ### Gerenciamento de processamento
 docker stats [nome do container] => indica dados de consumo de processamento do container
