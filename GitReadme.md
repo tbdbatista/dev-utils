@@ -7,7 +7,10 @@
 05. git push origin +HEAD^:\<name of your branch> => discard last pushed commit on remote repository
 06. git push origin \<SHA>:\<name of your branch> => discard all pushed commits on remote repository after \<SHA> reference
 07. git reset HEAD^ => remove last local commit and keep changes
-08. git reset \<SHA> => remove all local commits after \<SHA> reference and keep all changes
+08. git reset HEAD~2 => resets the HEAD pointer to two commits ago and keeps all changes in your working directory and staging area
+09. git reset \<SHA> => remove all local commits after \<SHA> reference and keep all changes
+10. git reset --soft HEAD => resets the HEAD pointer to the previous commit but keeps all changes in the staging area
+11. git reset --hard HEAD => resets the HEAD pointer to the previous commit and discards all changes in the staging area and working directory
 
 ### Git Stash
 
