@@ -17,17 +17,17 @@
 
 ### Git Branches
 
-git branch => lists all the local branches in the current repository.
-git branch <branch_name> => creates a new branch with the specified name.
-git branch -d <branch_name> => deletes the specified branch. Note that you cannot delete the currently checked-out branch.
-git branch -D <branch_name> => forcefully deletes the specified branch, even if it has unmerged changes.
-git branch -m <old_name> <new_name> => this command renames the specified branch.
-git branch -a => lists all the local and remote branches in the current repository.
-git branch -r => lists all the remote branches in the current repository.
-git branch --merged => lists all the branches that have been merged into the current branch.
-git branch --no-merged => lists all the branches that have not been merged into the current branch.
-git branch --contains <commit> => this command lists all the branches that contain the specified commit.
-git branch --list <pattern> => lists all the branches that match the specified pattern.
+01. git branch => lists all the local branches in the current repository.
+02. git branch <branch_name> => creates a new branch with the specified name.
+03. git branch -d <branch_name> => deletes the specified branch. Note that you cannot delete the currently checked-out branch.
+04. git branch -D <branch_name> => forcefully deletes the specified branch, even if it has unmerged changes.
+05. git branch -m <old_name> <new_name> => this command renames the specified branch.
+06. git branch -a => lists all the local and remote branches in the current repository.
+07. git branch -r => lists all the remote branches in the current repository.
+08. git branch --merged => lists all the branches that have been merged into the current branch.
+09. git branch --no-merged => lists all the branches that have not been merged into the current branch.
+10. git branch --contains <commit> => this command lists all the branches that contain the specified commit.
+11. git branch --list <pattern> => lists all the branches that match the specified pattern.
 
 ### Git Stash
 
