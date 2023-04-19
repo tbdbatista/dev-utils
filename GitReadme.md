@@ -15,6 +15,20 @@
 04. git reset --soft HEAD => resets the HEAD pointer to the previous commit but keeps all changes in the staging area
 05. git reset --hard HEAD => resets the HEAD pointer to the previous commit and discards all changes in the staging area and working directory
 
+### Git Branches
+
+git branch => lists all the local branches in the current repository.
+git branch <branch_name> => creates a new branch with the specified name.
+git branch -d <branch_name> => deletes the specified branch. Note that you cannot delete the currently checked-out branch.
+git branch -D <branch_name> => forcefully deletes the specified branch, even if it has unmerged changes.
+git branch -m <old_name> <new_name> => this command renames the specified branch.
+git branch -a => lists all the local and remote branches in the current repository.
+git branch -r => lists all the remote branches in the current repository.
+git branch --merged => lists all the branches that have been merged into the current branch.
+git branch --no-merged => lists all the branches that have not been merged into the current branch.
+git branch --contains <commit> => this command lists all the branches that contain the specified commit.
+git branch --list <pattern> => lists all the branches that match the specified pattern.
+
 ### Git Stash
 
 01. git stash => stashes the uncommitted changes (staged and unstaged files)
