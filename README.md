@@ -13,5 +13,5 @@ It allows developers to manage and track changes to their code over time. It is 
 ## Vim - [VimReadme](https://github.com/tbdbatista/dev-utils/blob/main/VimReadme.md)
 A text-based editor that is designed to be efficient, with keyboard shortcuts and commands that allow you to perform tasks quickly.
 
-## Linux Terminal
+## Linux Terminal - [LinuxTerminalReadme](https://github.com/tbdbatista/dev-utils/blob/main/LinuxTerminalReadme.md)
 A command-line interface that provides access to tasks like managing files, installing software, and monitoring system performance.
