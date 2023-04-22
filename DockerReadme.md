@@ -82,8 +82,6 @@ docker network disconnect [network name] [container name] => used to disconnect 
 
 docker network prune => remove all unused networks in Docker
 
-
-
 ### Processing management
 
 docker stats [network name] => display consumption data for the specified container
@@ -119,6 +117,30 @@ docker network inspect bridge => indica quais containers estão adicionados a re
 -f => to specify the name and location of the Dockerfile (if it's not called "Dockerfile" or not located in the current directory).
 
 --no-cache => to prevent Docker from using cached layers during the build process.
+
+### Docker Compose
+
+docker-compose up => Builds, (re)creates, starts, and attaches to containers for a service.
+
+docker-compose down => Stops and removes containers, networks, and volumes created by docker-compose up.
+
+docker-compose build => Builds or rebuilds services.
+
+docker-compose ps => Lists containers started by docker-compose along with their status.
+
+docker-compose logs => Displays log output from services.
+
+docker-compose restart => Restarts one or more services.
+
+docker-compose stop => Stops one or more running services.
+
+docker-compose exec => Executes a command inside a running container.
+
+docker-compose run => Runs a one-time command against a service.
+
+docker-compose pull => Pulls images for services defined in a docker-compose.yml file.
+
+docker-compose config => Validates and view the composed configuration.
 
 
 # Comandos para Docker :brazil:
@@ -237,3 +259,27 @@ docker network inspect bridge => indica quais containers estão adicionados a re
 -f => para especificar o nome e a localização do Dockerfile (se ele não se chamar "Dockerfile" ou não estiver localizado no diretório atual).
 
 --no-cache => para impedir que o Docker use camadas em cache durante o processo de construção.
+
+### Usando docker-compose
+
+docker-compose  =>: Constrói, (re)cria, inicia e conecta a contêineres para um serviço.
+
+docker-compose down => Para e remove contêineres, redes e volumes criados pelo docker-compose up.
+
+docker-compose build => Constrói ou reconstrói serviços.
+
+docker-compose ps => Lista contêineres iniciados pelo docker-compose juntamente com seu status.
+
+docker-compose logs => Exibe saída de log dos serviços.
+
+docker-compose restart => Reinicia um ou mais serviços.
+
+docker-compose stop => Para um ou mais serviços em execução.
+
+docker-compose exec => Executa um comando dentro de um contêiner em execução.
+
+docker-compose run => Executa um comando único em relação a um serviço.
+
+docker-compose pull => Baixa imagens para serviços definidos em um arquivo docker-compose.yml.
+
+docker-compose config => Valida e visualiza a configuração composta.
