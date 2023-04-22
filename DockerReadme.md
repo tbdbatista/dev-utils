@@ -262,7 +262,7 @@ docker network inspect bridge => indica quais containers estão adicionados a re
 
 ### Usando docker-compose
 
-docker-compose  =>: Constrói, (re)cria, inicia e conecta a contêineres para um serviço.
+docker-compose up => Constrói, (re)cria, inicia e conecta a contêineres para um serviço.
 
 docker-compose down => Para e remove contêineres, redes e volumes criados pelo docker-compose up.
 
