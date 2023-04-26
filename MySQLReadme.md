@@ -1,0 +1,59 @@
+CREATE => Creates a new table, view, or stored procedure. Ex.:
+
+CREATE TABLE employees (employee_id INT PRIMARY KEY, first_name VARCHAR(50), last_name VARCHAR(50), hire_date DATE); => Creates a new "employees" table with the specified columns and data types.
+
+ALTER => Modifies the structure of a table or view. Ex.:
+
+ALTER TABLE customers ADD COLUMN email VARCHAR(100); => Adds a new "email" column to the "customers" table.
+
+SELECT => Retrieves data from one or more tables. Ex.:
+
+SELECT * FROM customers WHERE age > 30; => Retrieves all columns from the "customers" table where the "age" column is greater than 30.
+
+INSERT => Inserts new data into a table. Ex.:
+
+INSERT INTO orders (order_id, customer_id, order_date) VALUES (1, 101, '2023-04-26'); => Inserts a new row into the "orders" table with the specified values for the "order_id", "customer_id", and "order_date" columns.
+
+UPDATE => Updates existing data in a table. Ex.:
+
+UPDATE products SET price = 9.99 WHERE product_id = 5; => Updates the "price" column in the "products" table to 9.99 for the row where the "product_id" is 5.
+
+DELETE => Deletes data from a table. Ex.:
+
+DELETE FROM customers WHERE customer_id = 101; => Deletes the row from the "customers" table where the "customer_id" is 101.
+
+DROP => Deletes a table, view, or stored procedure. Ex.:
+
+DROP VIEW order_summary; => Deletes the "order_summary" view.
+
+GRANT => Grants privileges to a MySQL user account. Ex.:
+
+GRANT SELECT, INSERT, UPDATE ON orders TO 'user1'@'localhost'; => Grants the "user1" MySQL user account SELECT, INSERT, and UPDATE privileges on the "orders" table.
+
+REVOKE => Revokes privileges from a MySQL user account. Ex.:
+
+REVOKE DELETE ON products FROM 'user2'@'localhost'; => Revokes the "user2" MySQL user account's DELETE privilege on the "products" table.
+
+SHOW => Displays information about databases, tables, or views. Ex.:
+
+SHOW DATABASES; => Displays a list of all databases in the MySQL server.
+
+DESCRIBE => Describes the structure of a table. Ex.:
+
+DESCRIBE customers; => Displays the structure of the "customers" table.
+
+USE sales_database; => Specifies that the "sales_database" database should be used.
+
+USE => Specifies the database to use. Ex.:
+
+SET => Sets MySQL system variables. Ex.:
+
+SET GLOBAL max_connections = 1000; => Sets the maximum number of allowed connections to 1000.
+
+EXPLAIN => Displays information about how MySQL executes a query. Ex.:
+
+EXPLAIN SELECT * FROM orders WHERE order_id = 100; => Displays information about how MySQL executes the query to retrieve all columns from the "orders" table where the "order_id" is 100.
+
+FLUSH => Flushes tables or logs. Ex.:
+
+FLUSH TABLES; => Flushes all tables in the MySQL server's cache.
