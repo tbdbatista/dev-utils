@@ -15,3 +15,5 @@ A text-based editor that is designed to be efficient, with keyboard shortcuts an
 
 ## Linux Terminal - [LinuxTerminalReadme](https://github.com/tbdbatista/dev-utils/blob/main/LinuxTerminalReadme.md)
 A command-line interface that provides access to tasks like managing files, installing software, and monitoring system performance.
+
+## MySQL
