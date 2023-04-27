@@ -42,9 +42,9 @@ DESCRIBE => Describes the structure of a table. Ex.:
 
 DESCRIBE customers; => Displays the structure of the "customers" table.
 
-USE sales_database; => Specifies that the "sales_database" database should be used.
-
 USE => Specifies the database to use. Ex.:
+
+USE sales_database; => Specifies that the "sales_database" database should be used.
 
 SET => Sets MySQL system variables. Ex.:
 
