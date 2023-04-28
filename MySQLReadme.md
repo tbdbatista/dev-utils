@@ -1,3 +1,5 @@
+# Basic commands
+
 CREATE => Creates a new table, view, or stored procedure. Ex.:
 
 CREATE TABLE employees (employee_id INT PRIMARY KEY, first_name VARCHAR(50), last_name VARCHAR(50), hire_date DATE); => Creates a new "employees" table with the specified columns and data types.
@@ -57,3 +59,44 @@ EXPLAIN SELECT * FROM orders WHERE order_id = 100; => Displays information about
 FLUSH => Flushes tables or logs. Ex.:
 
 FLUSH TABLES; => Flushes all tables in the MySQL server's cache.
+
+# INNER and OUTER commands
+
+1. INNER JOIN:
+
+Assuming we have two tables named "customers" and "orders", with a common column "customer_id", the following MySQL command will join the two tables using an INNER JOIN and return only the rows where there is a match on the customer_id column:
+
+```
+SELECT *
+FROM customers
+INNER JOIN orders
+ON customers.customer_id = orders.customer_id;
+```
+
+This command will return only the rows where there is a match on the customer_id column, meaning that only the customers who have placed an order will be returned.
+
+2. LEFT OUTER JOIN:
+
+Assuming we have the same "customers" and "orders" tables as above, the following MySQL command will join the two tables using a LEFT OUTER JOIN and return all rows from the customers table along with matching rows from the orders table. If there is no match in the orders table, the result will contain NULL values for the orders columns:
+
+```
+SELECT *
+FROM customers
+LEFT OUTER JOIN orders
+ON customers.customer_id = orders.customer_id;
+```
+
+This command will return all rows from the customers table, even if there is no match in the orders table. If there is a match, the result will contain columns from both tables, but if there is no match, the result will contain NULL values for the orders columns.
+
+3. RIGHT OUTER JOIN:
+
+Assuming we have the same "customers" and "orders" tables as above, the following MySQL command will join the two tables using a RIGHT OUTER JOIN and return all rows from the orders table along with matching rows from the customers table. If there is no match in the customers table, the result will contain NULL values for the customers columns:
+
+```
+SELECT *
+FROM customers
+RIGHT OUTER JOIN orders
+ON customers.customer_id = orders.customer_id;
+```
+
+This command will return all rows from the orders table, even if there is no match in the customers table. If there is a match, the result will contain columns from both tables, but if there is no match, the result will contain NULL values for the customers columns.
