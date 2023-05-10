@@ -1,11 +1,12 @@
 # Git Commands
 
-01. git commit --amend => Update the last commit, this must be done before you push it to the remote branch.
-02. git reset --hard \<SHA> => Reset your branch to the typed hash.
-03. git push --force (optional) => Reset everything on remote branch with the information of your local branch. ***Warning:*** don't use in shared branches as you will overwrite other user's progress.
-04. git rebase -i \<SHA you want to squash to> => Squash commits into one.
-05. git push origin +HEAD^:\<name of your branch> => discard last pushed commit on remote repository
-06. git push origin \<SHA>:\<name of your branch> => discard all pushed commits on remote repository after \<SHA> reference
+1. git commit --amend => Update the last commit, this must be done before you push it to the remote branch.
+2. git commit --amend --reset-author => update last local commit with the current configured user data
+3. git reset --hard \<SHA> => Reset your branch to the typed hash.
+4. git push --force (optional) => Reset everything on remote branch with the information of your local branch. ***Warning:*** don't use in shared branches as you will overwrite other user's progress.
+5. git rebase -i \<SHA you want to squash to> => Squash commits into one.
+6. git push origin +HEAD^:\<name of your branch> => discard last pushed commit on remote repository
+7. git push origin \<SHA>:\<name of your branch> => discard all pushed commits on remote repository after \<SHA> reference
 
 ### Git Reset
 
