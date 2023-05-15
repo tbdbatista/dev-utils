@@ -17,3 +17,5 @@ A text-based editor that is designed to be efficient, with keyboard shortcuts an
 A command-line interface that provides access to tasks like managing files, installing software, and monitoring system performance.
 
 ## MySQL - [MySQLReadme](https://github.com/tbdbatista/dev-utils/blob/main/MySQLReadme.md)
+
+## JWT - [JWTReadme]()
