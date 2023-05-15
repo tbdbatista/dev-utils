@@ -18,4 +18,4 @@ A command-line interface that provides access to tasks like managing files, inst
 
 ## MySQL - [MySQLReadme](https://github.com/tbdbatista/dev-utils/blob/main/MySQLReadme.md)
 
-## JWT - [JWTReadme]()
+## JWT - [JWTReadme](https://github.com/tbdbatista/dev-utils/blob/main/JWTReadme)
