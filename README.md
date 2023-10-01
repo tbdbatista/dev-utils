@@ -19,3 +19,11 @@ A command-line interface that provides access to tasks like managing files, inst
 ## MySQL - [MySQLReadme](https://github.com/tbdbatista/dev-utils/blob/main/MySQLReadme.md)
 
 ## JWT - [JWTReadme](https://github.com/tbdbatista/dev-utils/blob/main/JWTReadme)
+
+## AndroidManifest - [AndroidManifest](https://github.com/tbdbatista/dev-utils/blob/main/AndroidManifest.md)
+
+It serves as a crucial configuration file in Android app development. It defines various aspects of your Android application, including permissions, activities, services, receivers, content providers, and more. Think of it as the blueprint that outlines how your app interacts with the Android operating system and other apps on the device. It plays a fundamental role in securing permissions, declaring components like activities and services, and specifying how your app responds to different system events. Understanding and properly configuring the `AndroidManifest.xml` file is essential for building robust and well-behaved Android applications.
+
+For more details on AndroidManifest.xml, you can refer to the [official Android documentation](https://developer.android.com/guide/topics/manifest/manifest-intro).
+
+
