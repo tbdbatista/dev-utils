@@ -64,3 +64,35 @@ You'll be prompted with a few actions for each hunk:
    s - split the current hunk into smaller hunks  
    e - manually edit the current hunk  
    ? - print help  
+
+   ### Helpful Insights
+
+If you want to completely remove a file from both your working directory and your Git repository, you can follow these steps:
+
+Remove the file from tracking, let's use the Podfile.lock as an example:
+
+git rm --cached Podfile.lock  
+This removes the file from the index (staging area) but keeps it in your working directory.
+
+Delete the file from your working directory:
+
+rm Podfile.lock  
+This removes the file from your local file system.
+
+Add Podfile.lock to your .gitignore file:
+
+Open your .gitignore file and make sure it contains the line:
+
+Podfile.lock  
+This ensures that Podfile.lock is ignored and not tracked by Git.
+
+Commit the changes:
+
+git commit -m "Remove Podfile.lock"  
+This commits the removal of Podfile.lock to your local repository.
+
+If you want to remove the file from the remote repository:
+
+git push origin <branch_name>
+
+   
